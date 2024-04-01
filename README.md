@@ -8,5 +8,5 @@
  - Panel: Waybar
  - Launcher: Wofi
  - File Manager: Nemo
- ![Image](waybar.png?raw=true "Desktop")
+ - 
  ![Image](desktops.png?raw=true "Desktop")
