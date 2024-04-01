@@ -16,4 +16,4 @@
 - Mod + Shift, I - set corsair aio to quiet
 - Mod + Shift, O - set corsair aio to balanced
 - Mod + Shift, P - set corsair aio to extreme
-> requires liquidctl
+> requires liquidctl & aio.sh to be placed in /opt/aio
