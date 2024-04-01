@@ -13,12 +13,12 @@
 
 | Keybinds  | Action |
 | ------------- | ------------- |
-| Mod + Shift + I  | set corsair aio to quiet |
-| Mod + Shift + O | set corsair aio to balanced  |
-| Mod + Shift + P  | set corsair aio to extreme  |
+| Mod + Shift + I  | Set corsair aio to quiet |
+| Mod + Shift + O | Set corsair aio to balanced  |
+| Mod + Shift + P  | Set corsair aio to extreme  |
 
 > [!NOTE]
-> corsair aio keybinds require liquidctl & aio.sh to be placed in /opt/aio!
+> Corsair aio keybinds require liquidctl & aio.sh to be placed in /opt/aio!
 
 
 # Images
