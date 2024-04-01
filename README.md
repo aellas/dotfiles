@@ -8,6 +8,8 @@
  - Panel: Waybar
  - Launcher: Wofi
  - File Manager: Nemo
+ - Screenshots: Hyprshot
+ - Wallpaper: Swaybg
 
 # Noteable Keybinds
 
@@ -23,7 +25,6 @@
 
 > [!NOTE]
 > Corsair aio keybinds require liquidctl & [aio.sh](https://github.com/aellas/dotfiles/blob/main/aio.sh) to be placed in /opt/aio!
-
 
 # Images
 <img src="desktops.png" width="1080">
