@@ -8,8 +8,6 @@
  - Panel: Waybar
  - Launcher: Wofi
  - File Manager: Nemo
-   
-<img src="desktops.png" width="1080">
 
 # Noteable Keybinds
 
@@ -17,3 +15,7 @@
 - Mod + Shift, O - set corsair aio to balanced
 - Mod + Shift, P - set corsair aio to extreme
 > requires liquidctl & aio.sh to be placed in /opt/aio
+
+
+# Images
+<img src="desktops.png" width="1080">
