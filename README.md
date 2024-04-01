@@ -8,5 +8,11 @@
  - Panel: Waybar
  - Launcher: Wofi
  - File Manager: Nemo
+   
+<img src="desktops.png" width="1080">
 
- ![Image](desktops.png?raw=true "Desktop")
+# Noteable Keybinds
+
+- Mod + Shift, I - set corsair aio to quiet
+- Mod + Shift, O - set corsair aio to balanced
+- Mod + Shift, P - set corsair aio to extreme
