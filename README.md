@@ -2,9 +2,9 @@
  My dotfiles for hyprland
  
  - Distro: [CachyOS](https://cachyos.org/)
- - WM: Hyprland
- - Shell: Fish
- - Terminal: Kitty
+ - WM: [Hyprland](https://hyprland.org/)
+ - Shell: Fish + [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish)
+ - Terminal: [Kitty]
  - Panel: Waybar
  - Launcher: Wofi
  - File Manager: Nemo
