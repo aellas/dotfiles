@@ -1,7 +1,7 @@
 # dotfiles
  My dotfiles for hyprland
  
- - Distro: CachyOS
+ - Distro: [CachyOS](https://cachyos.org/)
  - WM: Hyprland
  - Shell: Fish
  - Terminal: Kitty
