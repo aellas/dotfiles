@@ -9,4 +9,5 @@
  - Launcher: Wofi
  - File Manager: Nemo
  - 
- ![Image](desktops.png?raw=true "Desktop" width="1920" height="1080" )
+<img src="desktops.png" width="1080" height"1920">
+
