@@ -4,7 +4,7 @@
  - Distro: [CachyOS](https://cachyos.org/)
  - WM: [Hyprland](https://hyprland.org/)
  - Shell: Fish + [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish)
- - Terminal: [Kitty]
+ - Terminal: Kitty
  - Panel: Waybar
  - Launcher: Wofi
  - File Manager: Nemo
