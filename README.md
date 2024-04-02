@@ -24,7 +24,6 @@
 | Mod + Shift + I  | Set corsair aio to quiet |
 | Mod + Shift + O | Set corsair aio to balanced  |
 | Mod + Shift + P  | Set corsair aio to extreme  |
-| Mod + Shift + P  | Set corsair aio to extreme  |
 
 > [!NOTE]
 > Corsair aio keybinds require liquidctl & [aio.sh](https://github.com/aellas/dotfiles/blob/main/aio.sh) to be placed in /opt/aio
