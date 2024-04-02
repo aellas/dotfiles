@@ -31,7 +31,7 @@
 # Images
 
 > Desktop
-![alt text](images/desktop.png?raw=true)
+![alt text](images/overview.png?raw=true)
 
 > Waybar
 ![alt text](images/waybar.png?raw=true)
