@@ -1,7 +1,7 @@
 # dotfiles
  My dotfiles for hyprland
  
- - Distro: [CachyOS](https://cachyos.org/)
+ - Distro: [Arch]((https://archlinux.org))
  - WM: [Hyprland](https://hyprland.org/)
  - Shell: Fish + [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish)
  - Terminal: Kitty
@@ -25,9 +25,3 @@
 
 > [!NOTE]
 > Corsair aio keybinds require liquidctl & [aio.sh](https://github.com/aellas/dotfiles/blob/main/aio.sh) to be placed in /opt/aio!
-
-# Images
-<img src="overview.png">
-
-> Neofetch
-<img src="neofetch.png">
