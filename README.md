@@ -17,10 +17,13 @@
 | ------------- | ------------- |
 | Mod + Q  | Kill Window |
 | Mod + ENTER  | Launches Kitty |
+| Mod + BACKSLASH | Launches Code  |
+| Mod + BACKSPACE  | Launches nvim via kitty  |
 | Mod + SPACE  | Launches Wofi |
 | Mod + SHIFT + W  | Restarts Waybar|
 | Mod + Shift + I  | Set corsair aio to quiet |
 | Mod + Shift + O | Set corsair aio to balanced  |
+| Mod + Shift + P  | Set corsair aio to extreme  |
 | Mod + Shift + P  | Set corsair aio to extreme  |
 
 > [!NOTE]
