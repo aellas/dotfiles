@@ -24,4 +24,4 @@
 | Mod + Shift + P  | Set corsair aio to extreme  |
 
 > [!NOTE]
-> Corsair aio keybinds require liquidctl & [aio.sh](https://github.com/aellas/dotfiles/blob/main/aio.sh) to be placed in /opt/aio!
+> Corsair aio keybinds require liquidctl & [aio.sh](https://github.com/aellas/dotfiles/blob/main/aio.sh) to be placed in /opt/aio
