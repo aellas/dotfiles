@@ -17,6 +17,8 @@
 | ------------- | ------------- |
 | Mod + Q  | Kill Window |
 | Mod + ENTER  | Launches Kitty |
+| Mod + BACKSLASH | Launches Code  |
+| Mod + BACKSPACE  | Launches nvim via kitty  |
 | Mod + SPACE  | Launches Wofi |
 | Mod + SHIFT + W  | Restarts Waybar|
 | Mod + Shift + I  | Set corsair aio to quiet |
