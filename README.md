@@ -1,7 +1,7 @@
 # dotfiles
  My dotfiles for hyprland
  
- - Distro: [Arch]((https://archlinux.org))
+ - Distro: [Arch]((https://archlinux.org)
  - WM: [Hyprland](https://hyprland.org/)
  - Shell: Fish + [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish)
  - Terminal: Kitty
