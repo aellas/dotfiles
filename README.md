@@ -28,4 +28,8 @@
 > [!NOTE]
 > Corsair aio keybinds require liquidctl & [aio.sh](https://github.com/aellas/dotfiles/blob/main/aio.sh) to be placed in /opt/aio
 
-![alt text](desktop.png?raw=true)
+# Desktop
+![alt text](images/desktop.png?raw=true)
+
+# Nemo
+![alt text](images/nemo.png?raw=true)
