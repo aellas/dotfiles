@@ -1,0 +1,18 @@
+[pyprland]
+plugins = [
+  "scratchpads",
+]
+
+[scratchpads.stb]
+animation = "fromBottom"
+command = "kitty --class kitty-stb sstb"
+class = "kitty-stb"
+lazy = true
+size = "75% 45%"
+
+[term]
+animation = "fromBottom"
+command = "kitty --class scratchpad"
+class = "kitty"
+lazy = true
+size = "75% 45%"

@@ -25,9 +25,14 @@
 
     
     "custom/updates": {
-    "exec": ".config/waybar/modules/updates.sh",
-    "interval": 3600,
-    "on-click": "kitty $echo sudo pacman -Syuu"
+        "tooltip-format": "{}",
+        "escape": true,
+        "return-type": "json",       
+        "exec": "~/.config/waybar/modules/updates.sh",
+        "restart-interval": 60,
+        "on-click": "kitty $echo sudo pacman -Syuu",
+        "on-click-right": "kitty --class script-floating -e pacseek",
+        "tooltip": false
     },
 
     "hyprland/window": {
@@ -106,7 +111,7 @@
         "tooltip": false,
         "on-click": "wlogout --protocol layer-shell"
     },
-
+    
     "hyprland/workspaces": {
         "format": "{icon}",
         "icon-size": 2,
