@@ -24,16 +24,10 @@
 # Images
 
 > Desktop
-![alt text](images/overview.png?raw=true)
+![alt text](images/hyprland.png?raw=true)
 
 > Waybar
 ![alt text](images/waybar.png?raw=true)
 
-> KItty + Neofetch
-![alt text](images/kittyneofetch.png?raw=true)
-
-> Nemo
-![alt text](images/nemo.png?raw=true)
-
-> Wallpaper
-> ![alt text](wallpaper/wallpaper.png?raw=true)
+> Kitty + fastfetch
+![alt text](images/fastfetch.png?raw=true)
