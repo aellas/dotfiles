@@ -3,16 +3,22 @@ plugins = [
   "scratchpads",
 ]
 
-[scratchpads.stb]
+[scratchpads.term]
 animation = "fromBottom"
-command = "kitty --class kitty-stb sstb"
-class = "kitty-stb"
-lazy = true
-size = "75% 45%"
-
-[term]
-animation = "fromBottom"
-command = "kitty --class scratchpad"
+command = "kitty"
 class = "kitty"
+lazy = fale
+size = "45% 25%"
+
+[scratchpads.volume]
+animation = "fromRight"
+command = "pavucontrol"
+class = "org.pulseaudio.pavucontrol"
 lazy = true
-size = "75% 45%"
+size = "45% 75%"
+
+[scratchpads.music]
+animation = "fromTop"
+command = "kitty --class flatpak run app.ytmdesktop.ytmdesktop"
+class = "music"
+size = "75% 60%"
