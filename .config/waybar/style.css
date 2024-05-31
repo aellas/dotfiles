@@ -1,0 +1,137 @@
+/* Mocha Flamingo */
+@define-color accent #9BBFBF;
+@define-color txt #ffffff;
+@define-color bg #131519;
+@define-color bg2 #131519;
+
+ * {
+    font-family: 'Ubuntu Nerd Font', monospace;
+    font-size: 13px;
+    font-weight: bold;
+    min-height: 18px;
+    border: none;
+    border-radius: 0;
+ }
+
+ /* Window */
+ window {
+    background: transparent;
+    margin: 5px;
+
+  }
+ /* Slide In */
+ @keyframes slideIn {
+    0% {
+       opacity: 0;
+    }
+
+    100% {
+       opacity: 1;
+    }
+ }
+
+
+.modules-right {
+  padding-left: 10px;
+  border-radius: 15px 0 0 15px;
+  margin-top: 4px;
+  background: #191B20;
+}
+
+.modules-center {
+  padding: 0 15px;
+  margin-top: 4px;
+  border-radius: 15px 15px 15px 15px;
+  background: #191B20;
+}
+
+.modules-left {
+  padding-right: 10px;
+  border-radius: 0 15px 15px 0;
+  margin-top: 4px;
+  background: #191B20;
+}
+
+
+ #workspaces button.active {
+   color: #30BA78;
+ }
+ /* Inner Box */
+ #inner-box {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    background-color: @bg;
+    animation: fadeIn 0.5s ease-in-out both;
+ }
+
+ /* Fade In */
+ @keyframes fadeIn {
+    0% {
+       opacity: 0;
+    }
+
+    100% {
+       opacity: 1;
+    }
+ }
+
+ /* Outer Box */
+ #outer-box {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    background-color: @bg;
+ }
+
+ /* Scroll */
+ #scroll {
+    margin: 0px;
+    padding: 10px;
+    border: none;
+ }
+
+ /* Input */
+ #input {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    color: @accent;
+    background-color: @bg2;
+    animation: fadeIn 0.5s ease-in-out both;
+ }
+
+ /* Text */
+ #text {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    color: @txt;
+    animation: fadeIn 0.5s ease-in-out both;
+ }
+
+ /* Selected Entry */
+ #entry:selected {
+   background-color: @accent;
+ }
+
+ #entry:selected #text {
+    color: @bg2;
+ }
+
+ #custom-shutdown {
+   padding: 8px;
+   color: #b23b3b;
+ }
+ #custom-logout {
+   padding: 8px;
+ }
+
+ #custom-suse {
+   color: #30BA78;
+ }
+
+ #tray {
+   padding-left: 5px;
+
+ }
