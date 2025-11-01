@@ -3,7 +3,7 @@
 
 ** Software
 - *Distro:* Fedora
-- *WM/DE:* Qtile [ Wayland ]
+- *WM/DE:* Qtile [Wayland] / Niri
 - *Colours:* Tokyo Night [ Night ]
 - *Editor:* Doom Emacs
 - *Terminal:* Wezterm
