@@ -1,0 +1,30 @@
+ARRANGE: ROW
+ALIGN: TOP
+
+SCALING: true
+
+MODE:
+   - NAME_DESC: eDP-1
+     WIDTH: 1920
+     HEIGHT: 1080
+     HZ: 60
+   - NAME_DESC: DP-3
+     WIDTH: 1920
+     HEIGHT: 1080
+     HZ: 239.759995
+     
+
+SCALE:
+   - NAME_DESC: eDP-1
+     SCALE: 1.00
+     
+VRR_OFF:
+   - "DP-3"
+   - "eDP-1"
+   - "DP-2"
+   - "DP-3"
+
+DISABLED:
+  - NAME_DESC: 'eDP-1'
+    IF:
+      - PLUGGED: ['DP-3']

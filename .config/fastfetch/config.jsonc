@@ -1,0 +1,67 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "source": "fedora_small",
+        "padding": {
+	        "top": 1,
+            "left": 2,
+	 },
+    },
+    "display": {
+        "separator": ""
+    },
+    "modules": [
+	"break",
+        {
+            "type": "host",
+            "key": "Host: ",
+            "keyColor": "34",
+            "format": "{3}",
+        },
+        {
+            "type": "os",
+            "key": "Distro: ",
+            "keyColor": "34"
+        },
+        {
+            "type": "kernel",
+            "key":  "Kernel: ",
+            "keyColor": "34",
+        },
+        {
+            "type": "uptime",
+            "key": "Uptime: ",
+            "keyColor": "34",
+        },
+        {
+            "type": "packages",
+            "format": "{}",
+            "key": "Packages: ",
+            "keyColor": "34",
+        },
+        {
+            "type": "shell",
+            "key": "Shell: ",
+            "keyColor": "34",
+        },
+        {
+            "type": "terminal",
+            "key": "Terminal: ",
+            "keyColor": "34",
+            "format": "{1}"
+        },
+        {
+            "type": "de",
+            "key": "Window: ",
+            "keyColor": "34",
+        },
+        {
+             "type": "command",
+             "key": "Day: ",
+	         "keyColor": "34",
+             "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference",
+        },
+        "break",
+        "break"
+    ]
+}

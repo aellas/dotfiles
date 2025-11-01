@@ -1,0 +1,330 @@
+// For documentation and full reference, see: https://github.com/YaLTeR/niri/wiki
+
+// ────────────── Input Configuration ──────────────
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Input
+
+input {
+    keyboard {
+        xkb {
+            layout "us"
+            }
+        numlock // Enable numlock on startup
+    }
+
+    touchpad {
+        tap // Enable tap-to-click
+        natural-scroll // Enable natural (macOS-style) scrolling
+    }
+
+        workspace-auto-back-and-forth // Enable workspace back & forth switching
+
+        focus-follows-mouse max-scroll-amount="95%" // Automatically focus windows under the mouse pointer
+}
+
+// ────────────── Output Configuration ──────────────
+// output "DP-3" {
+//     mode "1920x1080@239.760" // Set resolution and refresh rate
+//     scale 1 // No scaling (use 2 for HiDPI)
+// }
+
+// output "eDP-1" {
+//     mode "1920x1080@60.000"
+//     scale 1.2
+// }
+
+// ────────────── Keybindings ──────────────
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Key-Bindings
+
+binds {
+    MOD+SHIFT+ESCAPE                     { show-hotkey-overlay; }
+
+    // ─── Applications ───
+    Mod+return        hotkey-overlay-title="Open a Terminal: Wezterm"               { spawn "wezterm"; }
+    Mod+Shift+T       hotkey-overlay-title="Open a Terminal: Wezterm with tmux"     { spawn "wezterm" "-e" "tmux"; }
+    Mod+Space         hotkey-overlay-title="Run an Application: Rofi"             { spawn "rofi" "-show" "drun"; }
+    Mod+B             hotkey-overlay-title="Open a Browser: Floorp"                 { spawn "floorp"; }
+    Mod+D             hotkey-overlay-title="Open Discord: Vesktop"                  { spawn "vesktop" "--ozone-platform=wayland"; }
+    Mod+L             { spawn "bash" "-c" "emacsclient -c -a emacs"; }
+    Mod+shift+W       { spawn "bash" "-c" "~/.config/niri/scripts/reload_waybar.sh"; }
+    Mod+M             { spawn "wezterm" "-e" "jellyfin-tui"; }
+    Mod+K             { spawn "hyprpicker" "-a"; }
+    
+
+    MOD+S             { spawn "steam"; }
+    MOD+N             { spawn "wezterm" "-e" "yazi"; }
+    MOD+J             { spawn "sh" "-c" "_JAVA_AWT_WM_NONREPARENTING=1 _JAVA_AWT_USE_WAYLAND=1 flatpak run com.adamcake.Bolt"; }
+    MOD+T             { toggle-column-tabbed-display; }
+
+    Ctrl+Alt+L        { spawn "hyprlock"; }
+
+    Mod+Shift+P       { spawn "bash" "dotfiles/.config/qtile/scripts/power.sh"; }
+    Home             { spawn "bash" "dotfiles/.config/qtile/scripts/screenshot.sh"; }
+
+    // ─── Audio Controls ───
+    // Example volume keys mappings for PipeWire & WirePlumber.
+    // The allow-when-locked=true property makes them work even when the session is locked.
+    XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.02+"; }
+    XF86AudioLowerVolume                allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.02-"; }
+    XF86AudioMute                       allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+    XF86AudioMicMute                    allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+    XF86AudioNext                       allow-when-locked=true { spawn-sh "playerctl next"; }
+    XF86AudioPause                      allow-when-locked=true { spawn-sh "playerctl play-pause"; }
+    XF86AudioPlay                       allow-when-locked=true { spawn-sh "playerctl play-pause"; }
+    XF86AudioPrev                       allow-when-locked=true { spawn-sh "playerctl previous"; }
+
+    // ─── Window Movement and Focus ───
+    MOD+Q                               { close-window; }
+
+    MOD+LEFT                            { focus-column-left; }
+    MOD+RIGHT                           { focus-column-right; }
+    MOD+UP                              { focus-workspace-up; }
+    MOD+DOWN                            { focus-workspace-down; }
+
+    MOD+SHIFT+LEFT                       { move-column-left; }
+    MOD+SHIFT+RIGHT                      { move-column-right; }
+    MOD+CTRL+UP                         { move-window-up; }
+    MOD+CTRL+DOWN                       { move-window-down; }
+
+    MOD+HOME                            { focus-column-first; }
+    MOD+END                             { focus-column-last; }
+    MOD+CTRL+HOME                       { move-column-to-first; }
+    MOD+CTRL+END                        { move-column-to-last; }
+
+
+    // ─── Workspace Switching ───
+    MOD+WHEELSCROLLDOWN                 cooldown-ms=150 { focus-workspace-down; }
+    MOD+WHEELSCROLLUP                   cooldown-ms=150 { focus-workspace-up; }
+    MOD+CTRL+WHEELSCROLLDOWN            cooldown-ms=150 { move-column-to-workspace-down; }
+    MOD+CTRL+WHEELSCROLLUP              cooldown-ms=150 { move-column-to-workspace-up; }
+
+    MOD+WHEELSCROLLRIGHT                { focus-column-right; }
+    MOD+WHEELSCROLLLEFT                 { focus-column-left; }
+    MOD+CTRL+WHEELSCROLLRIGHT           { move-column-right; }
+    MOD+CTRL+WHEELSCROLLLEFT            { move-column-left; }
+
+    MOD+SHIFT+WHEELSCROLLDOWN           { focus-column-right; }
+    MOD+SHIFT+WHEELSCROLLUP             { focus-column-left; }
+    MOD+CTRL+SHIFT+WHEELSCROLLDOWN      { move-column-right; }
+    MOD+CTRL+SHIFT+WHEELSCROLLUP        { move-column-left; }
+
+    MOD+1                               { focus-workspace 1; }
+    MOD+2                               { focus-workspace 2; }
+    MOD+3                               { focus-workspace 3; }
+    MOD+4                               { focus-workspace 4; }
+    MOD+5                               { focus-workspace 5; }
+    MOD+6                               { focus-workspace 6; }
+    MOD+7                               { focus-workspace 7; }
+    MOD+8                               { focus-workspace 8; }
+    MOD+9                               { focus-workspace 9; }
+
+    MOD+SHIFT+1                          { move-column-to-workspace 1; }
+    MOD+SHIFT+2                          { move-column-to-workspace 2; }
+    MOD+SHIFT+3                          { move-column-to-workspace 3; }
+    MOD+SHIFT+4                          { move-column-to-workspace 4; }
+    MOD+SHIFT+5                          { move-column-to-workspace 5; }
+    MOD+SHIFT+6                          { move-column-to-workspace 6; }
+    MOD+SHIFT+7                          { move-column-to-workspace 7; }
+    MOD+SHIFT+8                          { move-column-to-workspace 8; }
+    MOD+SHIFT+9                          { move-column-to-workspace 9; }
+
+    //MOD+TAB                             { focus-workspace-previous; }
+
+    // ─── Layout Controls ───
+    MOD+C                         { expand-column-to-available-width; }
+    MOD+G                         { set-column-width "+25%"; } 
+
+    MOD+X                               { center-column; }
+    MOD+CTRL+C                          { center-visible-columns; }
+    MOD+MINUS                           { set-column-width "-10%"; }
+    MOD+EQUAL                           { set-column-width "+10%"; }
+    MOD+SHIFT+MINUS                     { set-window-height "-10%"; }
+    MOD+SHIFT+EQUAL                     { set-window-height "+10%"; }
+
+    // ─── Modes ───
+    MOD+F                               { toggle-window-floating; }
+    MOD+CTRL+F                          { fullscreen-window; }
+    MOD+W                               { toggle-column-tabbed-display; }
+
+    // ─── Screenshots ───
+    MOD+ALT+J                        { screenshot; }
+    MOD+ALT+K                        { screenshot-screen; }
+    MOD+ALT+L                        { screenshot-window; }
+
+    // ─── Emergency Escape Key ───
+    MOD+ESCAPE                          allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+
+    // ─── Exit / Power ───
+    CTRL+ALT+DELETE                     { quit; } // Also quits Niri
+    MOD+TAB                             repeat=false { toggle-overview; }
+
+    MouseForward { focus-column-right; }
+    MouseBack    { focus-column-left; }
+}
+
+// ────────────── Startup Applications ──────────────
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Miscellaneous#spawn-sh-at-startup
+
+spawn-at-startup "way-displays"
+spawn-at-startup "waybar"
+spawn-at-startup "xwayland-satellite"
+spawn-at-startup "/usr/libexec/polkit-mate-authentication-agent-1"
+spawn-at-startup "waypaper" "--restore"
+spawn-at-startup "emacs --daemon"
+spawn-at-startup "mako"
+
+// ────────────── Miscellaneous Settings ──────────────
+
+prefer-no-csd // Disable client-side decorations
+screenshot-path "~/Pictures/Screenshot/%Y-%m-%d_%H%M%S.png" // Screenshot save location
+
+switch-events {
+  lid-close {spawn "hyprlock";}
+}
+
+
+// ────────────── Layout Settings ──────────────
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
+
+layout {
+    gaps 8
+    background-color "transparent"
+    default-column-width { proportion 1.0; }
+    //center-focused-column "always"
+
+    focus-ring {
+        width 2
+        active-color "#91ACD1"
+        inactive-color "#13141C"
+    }
+
+    shadow {
+        softness 30
+        spread 5
+        offset x=0 y=5
+        color "#0007"
+    }
+
+
+    struts {}
+
+    tab-indicator {
+        width 8
+        gap 8
+        position "top"
+        place-within-column
+
+    }
+}
+
+// ────────────── Animation Settings ──────────────
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Animations
+    animations {
+        workspace-switch {
+            spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
+        }
+        window-open {
+            duration-ms 200
+            curve "ease-out-quad"
+        }
+        window-close {
+            duration-ms 200
+            curve "ease-out-cubic"
+        }
+        horizontal-view-movement {
+            spring damping-ratio=1.0 stiffness=900 epsilon=0.0001
+        }
+        window-movement {
+            spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+        }
+        window-resize {
+            spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
+        }
+        config-notification-open-close {
+            spring damping-ratio=0.6 stiffness=1200 epsilon=0.001
+        }
+        screenshot-ui-open {
+            duration-ms 300
+            curve "ease-out-quad"
+        }
+        overview-open-close {
+            spring damping-ratio=1.0 stiffness=900 epsilon=0.0001
+        }
+    }
+
+// ────────────── Window Rules ──────────────
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
+
+    window-rule {
+        match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+        open-floating true // Always float Firefox PiP windows
+    }
+
+    window-rule {
+        geometry-corner-radius 0 // Set every window radius to 0
+        clip-to-geometry true
+    }
+
+    window-rule {
+        open-maximized false
+    }
+
+    window-rule {
+        match app-id="emacs"
+            default-column-width { proportion 1.0; }
+    }
+    
+    window-rule {
+        match app-id="floorp-default"
+            default-column-width { proportion 1.0; }
+    }
+
+window-rule {
+    match app-id=r#"^io\.missioncenter\.MissionCenter$"#
+    match app-id=r#"^org\.gnome\.Nautilus$"#
+    match app-id=r#"^org\.pipewire\.Helvum$"#
+    match app-id=r#"^com\.saivert\.pwvucontrol$"#
+
+    open-floating true
+    default-column-width  { fixed 1280; }
+    default-window-height { fixed 720; }
+}
+
+
+// ────────────── Environment Variables ──────────────
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Miscellaneous#environment
+
+    environment {
+        DISPLAY ":1"
+        ELECTRON_OZONE_PLATFORM_HINT "auto"
+        QT_QPA_PLATFORM "wayland"
+        QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
+        XDG_SESSION_TYPE "wayland"
+        XDG_CURRENT_DESKTOP "niri"
+    }
+
+gestures {
+    hot-corners {
+        off
+    }
+}
+
+overview {
+    zoom 0.6
+    workspace-shadow {
+        off
+    }
+}
+
+layer-rule {
+    match namespace="swww-daemon"
+    place-within-backdrop true
+}
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+workspace "1"
+workspace "2"
+workspace "3"
+workspace "4"

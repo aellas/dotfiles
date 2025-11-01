@@ -1,0 +1,13 @@
+#+title: Dotfiles
+#+description: My dots for Fedora
+
+** Software
+- *Distro:* Fedora
+- *WM/DE:* Qtile [ Wayland ]
+- *Colours:* Tokyo Night [ Night ]
+- *Editor:* Doom Emacs
+- *Terminal:* Wezterm
+- *Fonts:* Ubuntu / JetBrains Mono Nerd Fonts
+- *Theme:* Tokyonight-Dark
+- *Icons:* Kora
+

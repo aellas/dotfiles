@@ -1,0 +1,112 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "spacing": 5,
+
+    "modules-left": ["custom/format", "custom/fedora", "custom/spacer2", "niri/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["tray", "custom/spacer", "custom/updates",  "custom/spacer", "disk", "custom/spacer", "battery", "custom/spacer", "wireplumber", "custom/spacer", "bluetooth", "network"],
+
+	"custom/fedora": {
+		"format": ""
+	},
+
+	"disk": {
+       "interval": 30,
+	   "format": "󰋊  {specific_free:0.2f} GB",
+       "unit": "GB",
+    },
+
+	"custom/spacer2": {
+		"format": " ︱"
+	},
+
+	"custom/spacer": {
+	  "format": " ︱ "
+	},
+
+	"custom/format": {
+		"format": " ",
+	},
+
+    "niri/workspaces": {
+    },
+
+    "clock": {
+        "format": "{:%A  %H:%M}"
+    },
+
+    "wireplumber": {
+        "format": "  {volume}%",
+        "max-volume": 100,
+        "scroll-step": 5
+    },
+
+	"battery": {
+		"states": {
+			"warning": 20,
+			"critical": 10
+		},
+		"format": "{icon}  {capacity}%",
+		"format-time": "{H} hr {M} min",
+		"format-icons": [
+			"󰂎", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰢞", "󰂂", "󰁹"
+		],
+		"format-charging": "󰉁 {capacity}%",
+		"min-length": 7,
+		"max-length": 7,
+		"tooltip-format": "Discharging: {time}",
+		"tooltip-format-charging": "Charging: {time}",
+		"events": {
+			"on-discharging-warning": "notify-send 'Battery Low (20%)' -i 'battery-020'",
+			"on-discharging-critical": "notify-send 'Battery Critical (10%)' -u critical -i 'battery-010'",
+			"on-charging-100": "notify-send 'Battery Full (100%)' -i 'battery-100-charged'"
+		}
+	},
+
+    "memory": {
+        "interval": 30,
+        "format": "\uf4bc  {used:0.1f}G"
+    },
+
+    "temperature": {
+        "format": "{temperatureC}°C"
+    },
+
+    "network": {
+        "format": "󰖩",
+        "format-ethernet": "󰖩",
+        "format-wifi": "{icon}",
+        "format-disconnected": "\udb83\udc9c",
+        "format-icons": ["󰖩"],
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname}",
+        "tooltip-format-disconnected": "Disconnected",
+    },
+
+    "bluetooth": {
+        "format": "\udb80\udcaf",
+        "format-disabled": "\udb80\udcb2",
+        "format-connected": "\udb80\udcb1",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+    },
+
+"custom/updates": {
+  "exec": "/home/array/.config/waybar/scripts/checkupdates.sh",
+  "interval": 900,
+  "return-type": "json",
+  "format": "{icon}  {text}",
+  "format-icons": {
+    "default": ""
+  },
+  "on-click": "wezterm -e sudo dnf upgrade --refresh",
+  "on-click-right": "bash /home/array/.config/waybar/scripts/checkupdates.sh"
+},
+    "tray": {
+        "icon-size": 14,
+        "spacing": 8
+    },
+}
