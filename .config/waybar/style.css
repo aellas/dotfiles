@@ -1,4 +1,4 @@
-@define-color foreground #D2D4DE;
+@define-color foreground #E9ECFC;
 @define-color foreground-inactive #aaaaaa;
 @define-color background #13141C;
 @define-color active #91ACD1;
@@ -19,13 +19,15 @@
 #workspaces button {
     color: @foreground;
     border-radius: 0;
+    transition: none;
     min-width: 20px;
-    margin-top: 2;
 }
 
 #workspaces button.active {
     color: @foreground;
-    border-bottom: 1px solid @active;
+    transition: none;
+    border-bottom: 2px solid @active;
+    border-top: 2px solid @background;
 }
 #workspaces button.empty {
     color: @foreground;
@@ -48,16 +50,15 @@
 
 #custom-fedora {
     font-size: 16;
-    margin-left: 6;
-    margin-right: 2;
-    color: #D2D4DE;
+    margin-left: 4;
+    margin-right: 0;
+    color: #F7768E;
 }
 
 #memory,
 #custom-updates,
 #wireplumber {
     font-size: 11;
-        color: #D2D4DE;
 
 }
 #battery {
@@ -67,7 +68,7 @@
 
 }
 #network {
-    font-size: 12;
+    font-size: 11;
     margin-right: 10;
         color: #D2D4DE;
 
@@ -80,3 +81,4 @@
 
 #tray {
 }
+

@@ -70,7 +70,7 @@ IS_EXTERNAL = is_external_monitor_connected()
 FONT_SIZE = 11 if IS_EXTERNAL else 14
 BAR_HEIGHT = 30 if IS_EXTERNAL else 38
 FEDORA_LOGO = 17 if IS_EXTERNAL else 20
-BLUETOOTH = 14 if IS_EXTERNAL else 16
+BLUETOOTH = 13 if IS_EXTERNAL else 16
 WIFI = 12 if IS_EXTERNAL else 14
 STATUS_ICON = 14 if IS_EXTERNAL else 15
 
@@ -91,7 +91,7 @@ keys = [
     Key(
         [mod],
         "b",
-        lazy.spawn("floorp --ozone-platform=wayland --ozone-platform-hint=wayland"),
+        lazy.spawn("floorp"),
         desc="Launch web browser",
     ),
     Key(
@@ -112,14 +112,6 @@ keys = [
     ),
     Key(
         [mod],
-        "y",
-        lazy.spawn(
-            "brave-browser --new-window --ozone-platform=wayland --ozone-platform-hint=wayland --app=https://music.youtube.com/"
-        ),
-        desc="launch",
-    ),
-    Key(
-        [mod],
         "d",
         lazy.spawn("vesktop --ozone-platform=wayland --ozone-platform-hint=wayland"),
         desc="Launch Discord",
@@ -131,7 +123,7 @@ keys = [
         [mod],
         "j",
         lazy.spawn(
-            "sh -c '_JAVA_AWT_WM_NONREPARENTING=1 _JAVA_AWT_USE_WAYLAND=1 flatpak run com.jagexlauncher.JagexLauncher'"
+            "sh -c 'distrobox-enter -n arch -- env _JAVA_AWT_WM_NONREPARENTING=1 _JAVA_AWT_USE_WAYLAND=1 bolt'"
         ),
         desc="Jagex Launcher",
     ),
@@ -367,18 +359,18 @@ screens = [
                 widget.TextBox(text=" ︱ ", font="Ubuntu Mono", padding=2, fontsize=10),
                 widget.TextBox(fmt="◨", font="JetBrainsMonoNF", fontsize=16),
                 widget.CurrentLayout(fontsize=FONT_SIZE),
-                widget.TextBox(text=" ︱ ", font="Ubuntu Mono", padding=2, fontsize=10),
-                widget.Battery(
-                    format="{char} {percent:2.0%}",
-                    low_percentage=0.2,
-                    show_short_text=False,
-                    notify_below=30,
-                    update_interval=1,
-                    charge_char=" 󰂄",
-                    discharge_char=" 󰁿",
-                    empty_char=" 󰂎",
-                    not_charging_char=" 󰂊",
-                ),
+               # widget.TextBox(text=" ︱ ", font="Ubuntu Mono", padding=2, fontsize=10),
+               # widget.Battery(
+               #     format="{char} {percent:2.0%}",
+               #     low_percentage=0.2,
+               #     show_short_text=False,
+               #     notify_below=30,
+               #     update_interval=1,
+               #     charge_char=" 󰂄",
+               #     discharge_char=" 󰁿",
+               #     empty_char=" 󰂎",
+               #     not_charging_char=" 󰂊",
+               # ),
                 widget.TextBox(text=" ︱ ", font="Ubuntu Mono", padding=2, fontsize=10),
                 widget.Volume(fmt=" {}"),
                 widget.TextBox(text=" ︱ ", font="Ubuntu Mono", padding=2, fontsize=10),

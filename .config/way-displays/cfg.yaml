@@ -12,7 +12,10 @@ MODE:
      WIDTH: 1920
      HEIGHT: 1080
      HZ: 239.759995
-     
+   - NAME_DESC: DP-1
+     WIDTH: 1920
+     HEIGHT: 1080
+     HZ: 239.760
 
 SCALE:
    - NAME_DESC: eDP-1
@@ -23,6 +26,7 @@ VRR_OFF:
    - "eDP-1"
    - "DP-2"
    - "DP-3"
+   - "DP-1"
 
 DISABLED:
   - NAME_DESC: 'eDP-1'

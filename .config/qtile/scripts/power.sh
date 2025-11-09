@@ -15,9 +15,9 @@ case "$chosen" in
         systemctl suspend
         ;;
     " Lock")
-        i3lock -c 000000
+        hyprlock 
         ;;
     "󰿅 Logout")
-        qtile cmd-obj -o cmd -f shutdown
+        niri msg action quit --skip-confirmation
         ;;
 esac

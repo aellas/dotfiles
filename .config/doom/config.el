@@ -77,3 +77,10 @@
 (setq treemacs-show-hidden-files t)
 (setq confirm-kill-emacs nil)
 
+;; OPTIONAL
+;; Integrate to `magit-tag'
+(with-eval-after-load 'magit-tag
+  (transient-append-suffix 'magit-tag
+    '(1 0 -1)
+    '("c" "changelog" git-cliff-menu)))
+

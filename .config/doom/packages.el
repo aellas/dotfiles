@@ -4,3 +4,4 @@
 (package! ligature)
 (package! multi-vterm)
 (package! treemacs)
+(package! git-cliff)
