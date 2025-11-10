@@ -53,9 +53,6 @@
                    "        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢷⡀⠀⠀⠀⢸⣿⡄⠀⠀⠀⠀⠀⠀⠀     ⠀"
                    "          ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀     "
                    "                                           "
-                   "                WELCOME                    "
-                   "      TO THE HOUSE OF PROTECTION           "
-                   "                                           "
                    ))
          (longest-line (apply #'max (mapcar #'length banner)))
          (start (point)))

@@ -276,6 +276,11 @@ window-rule {
     match app-id=r#"qimgv"#
         open-floating true
 }
+window-rule {
+    match app-id=r#"protonvpn-app"#
+        open-floating true
+}
+
 
 
 window-rule {
