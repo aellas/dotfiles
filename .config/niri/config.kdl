@@ -61,7 +61,7 @@ binds {
     Mod+A             { spawn "/opt/floorp/floorp" "--profile" "/home/array/.floorp/2zgumwcn.default-release" "--start-ssb" "{9f2a999a-2c8b-435b-94b5-922e0f76f3b5}"; } 
     MOD+S             { spawn "steam"; }
     MOD+N             { spawn "wezterm" "-e" "joshuto"; }
-    MOD+J             { spawn "sh" "-c" "distrobox-enter -n arch -- env _JAVA_AWT_WM_NONREPARENTING=1 _JAVA_AWT_USE_WAYLAND=1 bolt"; }
+    MOD+J             { spawn "sh" "-c" "env _JAVA_AWT_WM_NONREPARENTING=1 _JAVA_AWT_USE_WAYLAND=1 flatpak run com.adamcake.Bolt"; }
     MOD+SHIFT+T             { toggle-column-tabbed-display; }
 
     Ctrl+Alt+L        { spawn "hyprlock"; }
